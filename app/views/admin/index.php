@@ -28,7 +28,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="bi bi-bag-fill"></i>
                     <span>Product</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -91,7 +91,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
                                 <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                    src="/public/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -126,7 +126,7 @@
                     <div class="card ">
                         <div class="card-header bg-primary d-flex justify-content-between">
                             <h3 class="text-light">List Of Product</h3>
-                            <a href="create.html" class="btn btn-light"><i class="bi bi-person-fill-add"></i></a>
+                            <a href="create" class="btn btn-light"><i class="bi bi-person-fill-add"></i></a>
                             
                         </div>
                         <div class="card-body ">
@@ -144,21 +144,21 @@
                                         <td>1</td>
                                         <td>Coca Cola</td>
                                         <td>Softdrink</td>
-                                        <td><a href=""class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
+                                        <td><a href="edit"class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
                                         <td><a href=""class="btn btn-danger"><i class="bi bi-trash-fill"></i></a></td>
                                     </tbody>
                                     <tbody>
                                         <td>2</td>
                                         <td>Coca Cola</td>
                                         <td>Softdrink</td>
-                                        <td><a href=""class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
+                                        <td><a href="edit"class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
                                         <td><a href=""class="btn btn-danger"><i class="bi bi-trash-fill"></i></a></td>
                                     </tbody>
                                     <tbody>
                                         <td>3</td>
                                         <td>Coca Cola</td>
                                         <td>Softdrink</td>
-                                        <td><a href=""class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
+                                        <td><a href="edit"class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
                                         <td><a href=""class="btn btn-danger"><i class="bi bi-trash-fill"></i></a></td>
                                     </tbody>
                                 </tr>
