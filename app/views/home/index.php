@@ -8,7 +8,7 @@ session_start();
             <h1 class="banner-title">
                 <span>Temukan Kebutuhan Berkualitas Untuk Dapurmu</span>
             </h1>
-            <a href="#" class="btn btn-primary h1">Shop Now</a>
+            <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
         </div>
     </div>
 </header>
@@ -26,7 +26,7 @@ session_start();
                     <span><i class="fa fa-heart"></i></span>
                     <span>Bayam</span>
                 </div>
-                                <div class="design-title">
+                <div class="design-title">
                     <a href="#">Jeruk</a>
                 </div>
             </div>

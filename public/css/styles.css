@@ -32,9 +32,10 @@ header{
     color: #fff;
 }
 .banner-title{
-    font-size: 2.5rem;
+    font-size: 3.8rem;
     font-family: var(--Playfair);
     line-height: 1.2;
+    width: 70%;
 }
 .banner-title span{
     font-family: var(--Playfair);
