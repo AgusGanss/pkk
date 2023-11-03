@@ -150,3 +150,24 @@ header{
 .text-color{
     color: black;
 }
+
+.medsos .background{
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+}
+
+.background .bi::before{
+    margin-top: 6px;
+}
+
+.useful{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+}
+
+.useful li{
+    text-decoration: none;
+    list-style: none;
+}
