@@ -1,6 +1,6 @@
 <?php 
-class product_model extends Controller{
-    private $table='product';
+class category_model extends Controller{
+    private $table='category';
     private $db;
 
     public function __construct()
@@ -8,27 +8,25 @@ class product_model extends Controller{
         $this->db=new Database;
     }
 
-    public function getProduct(){
+    public function getCategory(){
         $this->db->query('SELECT * FROM ' . $this->table);
         return $this->db->resultSet();
     }
-    public function createProduct($data){
-        $query= "INSERT INTO product 
+    public function createCategory($data){
+        $query= "INSERT INTO category 
                 VALUES
-                (:id, :product, :category, :price)";
+                (:id, :category)";
 
         $this->db->query($query);
         $this->db->bind('id', $data['id']);
-        $this->db->bind('product', $data['product']);
         $this->db->bind('category', $data['category']);
-        $this->db->bind('price', $data['price']);
 
         $this->db->execute();
 
         return $this->db->rowCount();
     }
-    public function deleteProduct($id){
-        $query="DELETE FROM product WHERE id = :id ";
+    public function deleteCategory($id){
+        $query="DELETE FROM category WHERE id = :id ";
         $this->db->query($query);
         $this->db->bind('id',$id);
 

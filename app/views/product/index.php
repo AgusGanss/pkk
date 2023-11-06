@@ -115,37 +115,72 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid mt-5">
 
-
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="<?= BASEURL ?>/product/create" method="POST">
+                                        <div class="mb-3">
+                                            <label for="harga" class="form-label">Product Id</label>
+                                            <input type="number" class="form-control" id="harga" name="id">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="judul" class="form-label">Product</label>
+                                            <input type="text" class="form-control" id="judul" name="product">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="tahun" class="form-label">Category</label>
+                                            <input type="text" class="form-control" id="tahun" name="category">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="harga" class="form-label">Price</label>
+                                            <input type="number" class="form-control" id="harga" name="price">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal End -->
                     <!-- Page Heading -->
-                    <h1 class="h3 mt-5 text-gray-800">Manage Product</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Manage Product</h1>
                     <div class="card ">
                         <div class="card-header bg-primary d-flex justify-content-between">
                             <h3 class="text-light">List Of Product</h3>
-                            <a href="<?=BASEURL?>/product/create" class="btn btn-light"><i class="bi bi-person-fill-add"></i></a>
+                            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"><i class="bi bi-plus-square"></i> </button>
 
                         </div>
                         <div class="card-body ">
                             <table class="table">
                                 <tr>
-                                    <thead>
-                                        <th>ID</th>
+                                    <thead >
+                                        <th>Product Id</th>
                                         <th>Product Name</th>
                                         <th>Category</th>
-                                        <th>crize</th>
+                                        <th>Price</th>
                                         <th colspan="2" class="fw-bolder">Action</th>
                                     </thead>
                                 </tr>
                                 <tr>
-                                <?php foreach ($data['product'] as $p) : ?>
-                                    <tbody>
-                                        <td><?= $p['id']; ?></td>
-                                        <td><?= $p['product']; ?></td>
-                                        <td><?= $p['category']; ?></td>
-                                        <td><?= $p['price']; ?></td>
-                                        <td><a href="product/edit " class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
-                                        <td><a href="" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a></td>
-                                    </tbody>
-                                <?php endforeach; ?>    
+                                    <?php foreach ($data['product'] as $p) : ?>
+                                        <tbody >
+                                            <td><?= $p['id']; ?></td>
+                                            <td><?= $p['product']; ?></td>
+                                            <td><?= $p['category']; ?></td>
+                                            <td><?= $p['price']; ?></td>
+                                            <td><a href="product/edit " class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
+                                            <td><a href="<?= BASEURL ?>/product/delete/<?= $p['id'] ?>" class="btn btn-danger" onclick="return confirm('Yakin hapus data??');"><i class="bi bi-trash-fill"></i></a></td>
+                                        </tbody>
+                                    <?php endforeach; ?>
                                 </tr>
                             </table>
                         </div>

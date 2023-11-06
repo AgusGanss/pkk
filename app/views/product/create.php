@@ -153,7 +153,7 @@
                             <h3 class="text-light">Add Product</h3>
                         </div>
                         <div class="card-body mz-5">
-                            <form action="<?=BASEURL?>/product/create" method="post">
+                            <form action=" method="post">
                                 <div class="form-group-row">
                                     <label>Product</label>
                                     <input type="text" class="form-control" name="product">

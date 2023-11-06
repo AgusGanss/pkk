@@ -34,9 +34,9 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Component Of Product</h6>
-                        <a class="collapse-item" href="<?= BASEURL; ?>/admin">Manage Product</a>
-                        <a class="collapse-item" href="/admin/manage-stock">Manage Stock</a>
-                        <a class="collapse-item" href="/admin/manage-stock">Manage Category</a>
+                        <a class="collapse-item" href="<?= BASEURL; ?>/product">Manage Product</a>
+                        <a class="collapse-item" href="<?= BASEURL; ?>/stock">Manage Stock</a>
+                        <a class="collapse-item" href="<?= BASEURL; ?>/category">Manage Category</a>
                     </div>
                 </div>
             </li>
@@ -73,7 +73,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-5 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -113,49 +113,58 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container-fluid mt-5">
 
-
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Category</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="<?= BASEURL ?>/category/create" method="POST">
+                                        <div class="mb-3">
+                                            <label for="tahun" class="form-label">Category</label>
+                                            <input type="text" class="form-control" id="tahun" name="category">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal End -->
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Manage Category</h1>
                     <div class="card ">
                         <div class="card-header bg-primary d-flex justify-content-between">
-                            <h3 class="text-light">List Of Product</h3>
-                            <a href="product/create" class="btn btn-light"><i class="bi bi-person-fill-add"></i></a>
+                            <h3 class="text-light">List Of Category</h3>
+                            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"><i class="bi bi-plus-square"></i> </button>
 
                         </div>
                         <div class="card-body ">
                             <table class="table">
                                 <tr>
-                                    <thead>
-                                        <th>ID</th>
-                                        <th>Product Name</th>
+                                    <thead >
+                                        <th>Id</th>
                                         <th>Category</th>
                                         <th colspan="2" class="fw-bolder">Action</th>
                                     </thead>
                                 </tr>
                                 <tr>
-                                    <tbody>
-                                        <td>1</td>
-                                        <td>Coca Cola</td>
-                                        <td>Softdrink</td>
-                                        <td><a href="product/edit " class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
-                                        <td><a href="" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a></td>
-                                    </tbody>
-                                    <tbody>
-                                        <td>2</td>
-                                        <td>Coca Cola</td>
-                                        <td>Softdrink</td>
-                                        <td><a href="product/edit" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
-                                        <td><a href="" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a></td>
-                                    </tbody>
-                                    <tbody>
-                                        <td>3</td>
-                                        <td>Coca Cola</td>
-                                        <td>Softdrink</td>
-                                        <td><a href="product/edit" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
-                                        <td><a href="" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a></td>
-                                    </tbody>
+                                    <?php foreach ($data['category'] as $c) : ?>
+                                        <tbody >
+                                            <td><?= $c['id']; ?></td>
+                                            <td><?= $c['category']; ?></td>
+                                            <td><a href="product/edit " class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
+                                            <td><a href="<?= BASEURL ?>/category/delete/<?= $c['id'] ?>" class="btn btn-danger" onclick="return confirm('Yakin hapus data??');"><i class="bi bi-trash-fill"></i></a></td>
+                                        </tbody>
+                                    <?php endforeach; ?>
                                 </tr>
                             </table>
                         </div>

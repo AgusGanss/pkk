@@ -8,15 +8,10 @@ class product extends Controller{
         $this->view('product/index',$data);
         $this->view('Templates/footer-admin');
     }
-    public function create($data){
-        $data ['judul'] = 'Product Create';
+    public function create(){
         if($this->model('product_model')->createProduct($_POST) > 0){
             header('Location: ' . BASEURL . ' /product');
             exit;
-        }else{
-            $this->view('Templates/header-admin', $data);
-            $this->view('product/create',$data);
-            $this->view('Templates/footer-admin');
         }
     }
     public function edit(){
@@ -24,6 +19,12 @@ class product extends Controller{
         $this->view('Templates/header-admin', $data);
         $this->view('product/edit');
         $this->view('Templates/footer-admin');
+    }
+    public function delete($id){
+        if($this->model('product_model')->deleteProduct($id) > 0){
+            header('Location: ' . BASEURL . ' /product');
+            exit;
+        }
     }
 }
 
