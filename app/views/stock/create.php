@@ -147,10 +147,10 @@
 
   
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Manage Product</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Manage Stock</h1>
                     <div class="card ">
                         <div class="card-header bg-primary ">
-                            <h3 class="text-light">Add Product</h3>
+                            <h3 class="text-light">Add stock</h3>
                         </div>
                         <div class="card-body mz-5">
                             <form action="">
@@ -179,7 +179,7 @@
                                 </div>
                                 <div class="button text-center mt-3">
                                     <button type="submit" class="btn btn-primary">
-                                        Add Product
+                                        Add Stock
                                     </button>
                                 </div>
                             </form>
@@ -240,8 +240,6 @@
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
 
 </body>
 

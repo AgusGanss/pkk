@@ -1,3 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TOSEMSA</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
+</head>
 
 <body id="page-top">
 
@@ -28,7 +53,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="bi bi-bag-fill"></i>
+                    <i class="fas fa-fw fa-cog"></i>
                     <span>Product</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -91,7 +116,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
                                 <img class="img-profile rounded-circle"
-                                    src="/public/img/undraw_profile.svg">
+                                    src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -124,45 +149,32 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Manage Product</h1>
                     <div class="card ">
-                        <div class="card-header bg-primary d-flex justify-content-between">
-                            <h3 class="text-light">List Of Product</h3>
-                            <a href="create" class="btn btn-light"><i class="bi bi-person-fill-add"></i></a>
-                            
+                        <div class="card-header bg-primary ">
+                            <h3 class="text-light">Add Product</h3>
                         </div>
-                        <div class="card-body ">
-                            <table class="table">
-                                <tr>
-                                    <thead>
-                                        <th>ID</th>
-                                        <th>Product Name</th>
-                                        <th>Category</th>
-                                        <th colspan="2" class="fw-bolder">Action</th>
-                                    </thead>
-                                </tr>
-                                <tr>
-                                    <tbody>
-                                        <td>1</td>
-                                        <td>Coca Cola</td>
-                                        <td>Softdrink</td>
-                                        <td><a href="edit"class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
-                                        <td><a href=""class="btn btn-danger"><i class="bi bi-trash-fill"></i></a></td>
-                                    </tbody>
-                                    <tbody>
-                                        <td>2</td>
-                                        <td>Coca Cola</td>
-                                        <td>Softdrink</td>
-                                        <td><a href="edit"class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
-                                        <td><a href=""class="btn btn-danger"><i class="bi bi-trash-fill"></i></a></td>
-                                    </tbody>
-                                    <tbody>
-                                        <td>3</td>
-                                        <td>Coca Cola</td>
-                                        <td>Softdrink</td>
-                                        <td><a href="edit"class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
-                                        <td><a href=""class="btn btn-danger"><i class="bi bi-trash-fill"></i></a></td>
-                                    </tbody>
-                                </tr>
-                            </table>
+                        <div class="card-body mz-5">
+                            <form action=" method="post">
+                                <div class="form-group-row">
+                                    <label>Product</label>
+                                    <input type="text" class="form-control" name="product">
+                                </div>
+                                <div class="form-group-row">
+                                    <label>Category</label>
+                                    <select name="category" id=""class="form-control">
+                                        <option value="">Softdrink</option>
+                                        <option value="">Snack</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-row">
+                                    <label>Price</label>
+                                    <input type="number" class="form-control" name="price">
+                                </div>
+                                <div class="button text-center mt-3">
+                                    <button type="submit" class="btn btn-primary">
+                                        Add Product
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
 
@@ -220,6 +232,7 @@
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
 
+</body>
+
+</html>
