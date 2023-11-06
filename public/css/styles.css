@@ -171,3 +171,44 @@ header{
     text-decoration: none;
     list-style: none;
 }
+
+.list-products{
+    max-width: 98%;
+    overflow: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.list-products .cards {
+    display: inline-block;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    border-radius: 10px;
+    height: 200px;
+    width: 250px;
+}
+
+.list-products .cards .img {
+
+}
+
+.list-products .cards .title {
+    padding: 2px;
+    color: black;
+    font-size: 20px;
+}
+
+.list-products .cards .title a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.list-products .cards .title p {
+margin-bottom: 0;
+margin-top: 10px;
+margin-left: 30px;
+}

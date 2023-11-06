@@ -10,15 +10,9 @@
       <li class="link-list"><a href="<?= BASEURL ?>" class="nav-list">Home</a></li>
       <li class="link-list"><a href="<?= BASEURL ?>" class="nav-list">About</a></li>
       <li class="link-list">
-        <div class="dropdown show">
-          <a class="dropdown-toggle nav-list" href="<?= BASEURL ?>/services" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Shop
-          </a>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="<?= BASEURL ?>">Vegetable</a>
-            <a class="dropdown-item" href="<?= BASEURL ?>">Fruit</a>
-          </div>
-        </div>
+        <a class="nav-list" href="<?= BASEURL ?>/shop">
+          Shop
+        </a>
       </li>
       <li>
         <div class="input-group bx-5 nav-list">
