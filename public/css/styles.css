@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 img{
     width: 100%;
     display: block;
@@ -172,43 +176,85 @@ header{
     list-style: none;
 }
 
-.list-products{
-    max-width: 98%;
-    overflow: auto;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    white-space: nowrap;
-}
+/* Shop */
 
-.list-products .cards {
-    display: inline-block;
-    background-color: rgb(180, 180, 180);
+.ticket {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .ticket::-webkit-scrollbar {
+    display: none;
+  }
+
+   .ticket .centers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 22.5px;
+    margin-right: 22.5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .ticket .centers a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .ticket .article-card {
+    width: 245px;
+    height: 154px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 300ms;
+  }
+  
+  .ticket .article-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  
+  .ticket .article-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .ticket .article-card .content {
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    padding: 30px 20px 20px 20px;
+    height: auto;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  }
+
+  .ticket .article-card .content{
     text-align: center;
-    padding: 14px;
-    text-decoration: none;
-    border-radius: 10px;
-    height: 200px;
-    width: 250px;
-}
+  }
 
-.list-products .cards .img {
-
-}
-
-.list-products .cards .title {
-    padding: 2px;
-    color: black;
-    font-size: 20px;
-}
-
-.list-products .cards .title a {
-    text-decoration: none;
-    color: black;
-}
-
-
-.list-products .cards .title p {
-margin-bottom: 0;
-margin-top: 10px;
-margin-left: 30px;
-}
+  .ticket .article-card .content p{
+    text-align: left;
+  }
+  
+  
+  .ticket .article-card .date,
+  .ticket .article-card .title {
+    margin: 0;
+  }
+  
+  .ticket .article-card .date {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 4px;
+  }
+  
+  .ticket .article-card .title {
+    font-size: 17px;
+    color: #fff;
+  }

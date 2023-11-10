@@ -25,23 +25,41 @@
   </a>
 </div>
 
-<div class="top mt-3 ml-3">
-  <div class="d-flex mt-3 mb-3 ml-3">
-    <h5 class="text-center p-2" style="color:white; background-color:blue; width:10%; border-radius:10px;">Products</h5>
-  </div>
-  <div class="list-products">
-    <?php foreach ($data['product'] as $row) : ?>
-      <div class="cards ml-3">
-        <div class="img">
+<div class="d-flex mt-4 mb-2 ml-3">
+  <h3 class="text-center p-2" style="color:white; background-color:blue; width:18%; border-radius:10px;">Produk Paling Laku</h3>
+</div>
+
+<div class="ticket">
+  <?php foreach ($data['product'] as $row) : ?>
+    <a href="<?= BASEURL ?>/product/buy/<?= $row['id']; ?>">
+      <div class="centers">
+        <div class="article-card">
+          <div class="content">
+            <p>Rp. <?= $row['harga']; ?></p>
+            <a href="#"> <?= $row['nama']; ?></a>
+          </div>
           <img src="<?= BASEURL ?><?= $row['image']; ?>" alt="" class="img-fluid">
         </div>
-        <div class="title d-flex">
-          <a href="#"> <?= $row['nama']; ?></a>
-          <p>Rp. <?= $row['harga']; ?></p>
+      </div>
+    </a>
+  <?php endforeach; ?>
+</div>
+
+<hr>
+
+<div class="d-flex mt-4 mb-2 ml-3">
+  <h3 class="text-center p-2" style="color:white; background-color:blue; width:18%; border-radius:10px;">Kategori Produk</h3>
+</div>
+
+<?php foreach ($data['kategori'] as $row) : ?>
+    <a href="<?= BASEURL ?>/product/buy/<?= $row['id']; ?>">
+      <div class="centers">
+        <div class="article-card">
+          <div class="content">
+            <a href="#"> <?= $row['kategori']; ?></a>
+          </div>
         </div>
       </div>
-    <?php endforeach; ?>
-  </div>
-
-  <br><br><br><br><br>
+    </a>
+  <?php endforeach; ?>
 </div>

@@ -8,7 +8,7 @@
         <i class="fas fa-times"></i>
       </div>
       <li class="link-list"><a href="<?= BASEURL ?>" class="nav-list">Home</a></li>
-      <li class="link-list"><a href="<?= BASEURL ?>" class="nav-list">About</a></li>
+      <li class="link-list"><a href="<?= BASEURL ?>/#about" class="nav-list">About</a></li>
       <li class="link-list">
         <a class="nav-list" href="<?= BASEURL ?>/shop">
           Shop

@@ -86,7 +86,7 @@ session_start();
     <hr style="height:1.5px; width:100%; border-width:0; color:grey; background-color:grey">
 </section>
 
-<section>
+<section id="about">
     <div class="d-flex mt-5 mb-5 ml-5">
         <h1 class="text-center p-2" style="color:white; background-color:blue; width:20%; border-radius:10px;">Tentang Kita</h1>
     </div>
