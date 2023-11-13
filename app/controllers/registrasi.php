@@ -6,7 +6,6 @@ class Registrasi extends Controller {
     $data ['judul'] = 'Registrasi';
     $this->view('templates/header', $data);
     $this->view ('registrasi/index');
-    $this->view('templates/footer');
    }
 
    public function tambah(){

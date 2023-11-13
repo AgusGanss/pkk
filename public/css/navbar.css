@@ -19,14 +19,14 @@
   width: 100%;
   z-index: 2;
   transition: all 0.3s ease;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0);
   padding: 1.2rem;
 
 }
 .navbar.sticky{
   background: #1b1b1b;
   padding: 10px 0;
-  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.9);
 }
 .navbar .content{
   display: flex;

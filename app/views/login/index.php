@@ -8,12 +8,14 @@
     </div>
        <div  class="form-group">
      <p style="font-size: 10px;">Login to your Account</p>
-    <form action="" method="">
-      <input type="email" class="form-control form-control-use id="exampleInputEmail" aria-describedby="emailHelp"placeholder="Enter Email Address...">
+
+
+     <form action="<?= BASEURL; ?>/login/prosesLogin" method="post">
+      <input type="email" class="form-control form-control-use id="exampleInputEmail" aria-describedby="emailHelp"placeholder="Enter Email Address..." name="email">
     </div>
 
     <div class="form-group">
-      <input type="password" class="form-control form-control-use id="exampleInputEmail" aria-describedby="emailHelp" placeholder=" Password...">
+      <input type="password" class="form-control form-control-use id="exampleInputEmail" aria-describedby="emailHelp" placeholder=" Password..." name="password">
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>

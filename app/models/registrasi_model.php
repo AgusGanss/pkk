@@ -24,6 +24,12 @@
 
             return $this->db->rowCount();
          }
+
+         public function getUsersById($id){
+            $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
+            $this->db->bind('id', $id);
+            return $this->db->single();
+         }
          
          
 

@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 img{
     width: 100%;
     display: block;
@@ -32,9 +36,10 @@ header{
     color: #fff;
 }
 .banner-title{
-    font-size: 2.5rem;
+    font-size: 3.8rem;
     font-family: var(--Playfair);
     line-height: 1.2;
+    width: 70%;
 }
 .banner-title span{
     font-family: var(--Playfair);
@@ -56,3 +61,200 @@ header{
     justify-content: space-between;
     width: 50%;
 }
+
+.link-list{
+    margin-top: 5px;
+}
+
+.nav-list-end{
+    margin-left: 50px;
+}
+
+.design{
+    padding: 4.5rem;
+    margin-top: 0px;
+}
+.title{
+    text-align: center;
+    padding: 1rem 0;
+}
+.title h2{
+    font-family: var(--Playfair);
+    font-size: 2.4rem;
+}
+.title p{
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+}
+.design-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.design-item{
+    cursor: pointer;
+    margin: 1.5rem 0;
+    max-width: 320px;
+    
+}
+.design-img{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.design-img ::after{
+    position: absolute;
+    content: --;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+.design-img img{
+    transition: all 0.5s ease;
+    filter: brightness(90%);
+}
+
+.design-item:hover img{
+    transform: scale(1.2);
+    border-radius: 10px;
+}
+.design-img span:first-of-type{
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    background: var(--exDark);
+    color: #fff;
+    padding: 0.25rem 1rem;
+}
+.design-img span:last-of-type{
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.design-title{
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+}
+.design-title a{
+    color: var(--dark);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--Playfair)
+}
+
+.text-color{
+    color: black;
+}
+
+.medsos .background{
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+}
+
+.background .bi::before{
+    margin-top: 6px;
+}
+
+.useful{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+}
+
+.useful li{
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Shop */
+
+.ticket {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .ticket::-webkit-scrollbar {
+    display: none;
+  }
+
+   .ticket .centers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 22.5px;
+    margin-right: 22.5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .ticket .centers a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .ticket .article-card {
+    width: 245px;
+    height: 154px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 300ms;
+  }
+  
+  .ticket .article-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  
+  .ticket .article-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .ticket .article-card .content {
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    padding: 30px 20px 20px 20px;
+    height: auto;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  }
+
+  .ticket .article-card .content{
+    text-align: center;
+  }
+
+  .ticket .article-card .content p{
+    text-align: left;
+  }
+  
+  
+  .ticket .article-card .date,
+  .ticket .article-card .title {
+    margin: 0;
+  }
+  
+  .ticket .article-card .date {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 4px;
+  }
+  
+  .ticket .article-card .title {
+    font-size: 17px;
+    color: #fff;
+  }

@@ -10,7 +10,15 @@
     <meta name="author" content="">
 
     <title>TOSEMSA</title>
-
+   <?php 
+	session_start();
+ 
+	// cek apakah yang mengakses halaman ini sudah login
+	if($_SESSION['level']==""){
+		header("location:login/index");
+	}
+ 
+	?>
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -34,7 +42,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-text "><h3>TOSEMSA</h3></div>
+                <div class="sidebar-brand-text "><h3>ADMIN</h3></div>
             </a>
 
             <!-- Divider -->
@@ -150,7 +158,7 @@
                     <h1 class="h3 mb-4 text-gray-800">Manage Product</h1>
                     <div class="card ">
                         <div class="card-header bg-primary ">
-                            <h3 class="text-light">Add Product</h3>
+                            <h3 class="text-light">Edit Product</h3>
                         </div>
                         <div class="card-body mz-5">
                             <form action="">
@@ -179,7 +187,7 @@
                                 </div>
                                 <div class="button text-center mt-3">
                                     <button type="submit" class="btn btn-primary">
-                                        Add Product
+                                        Edit Product
                                     </button>
                                 </div>
                             </form>
@@ -202,7 +210,7 @@
             </footer>
             <!-- End of Footer -->
 
-        </div>
+        </div> 
         <!-- End of Content Wrapper -->
 
     </div>
