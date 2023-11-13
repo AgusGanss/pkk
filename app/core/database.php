@@ -48,19 +48,19 @@ class Database {
         }
         $this->stmt->bindValue($param, $value, $type);
     }
-    public function execute(){
-        $this->stmt->execute();
-    }
+        public function execute(){
+            $this->stmt->execute();
+        }
 
-    public function resultset(){
-        $this->execute();
-        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
+        public function resultset(){
+            $this->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
 
-    public function single(){
-        $this->execute();
-        return $this->stmt->fetch(PDO::FETCH_ASSOC);
-    }
+        public function single(){
+            $this->execute();
+            return $this->stmt->fetch(PDO::FETCH_ASSOC);
+        }
 
     public function rowCount()
     {
