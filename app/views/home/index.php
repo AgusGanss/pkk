@@ -86,7 +86,7 @@ session_start();
     <hr style="height:1.5px; width:100%; border-width:0; color:grey; background-color:grey">
 </section>
 
-<section>
+<section id="about">
     <div class="d-flex mt-5 mb-5 ml-5">
         <h1 class="text-center p-2" style="color:white; background-color:blue; width:20%; border-radius:10px;">Tentang Kita</h1>
     </div>
@@ -116,33 +116,3 @@ session_start();
     </div>
 </section>
 
-<section>
-    <div class="p-3 text-light d-flex bd-highlight" style="background-color: black;">
-        <div class="p-2 flex-fill bd-highlight text-center">
-            <h5>Useful Link</h5>
-            <ul class="useful">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Shop</a></li>
-            </ul>
-        </div>
-        <div class="p-2 flex-fill bd-highlight text-center">
-            <h5>Private Policy</h5>
-        </div>
-        <div class="p-2 flex-fill bd-highlight text-center">
-            <h5>Media Sosial</h5>
-            <div class="medsos d-flex justify-content-center">
-                <div class="bg-secondary m-3 background ">
-                    <i class="bi bi-instagram "></i>
-                </div>
-                <div class="bg-secondary m-3 background">
-                    <i class="bi bi-facebook"></i>
-                </div>
-                <div class="bg-secondary m-3 background">
-                    <i class="bi bi-twitter"></i>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
