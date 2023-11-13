@@ -51,15 +51,17 @@
   <h3 class="text-center p-2" style="color:white; background-color:blue; width:18%; border-radius:10px;">Kategori Produk</h3>
 </div>
 
-<?php foreach ($data['kategori'] as $row) : ?>
+<?php foreach ($data['category'] as $row) : ?>
     <a href="<?= BASEURL ?>/product/buy/<?= $row['id']; ?>">
       <div class="centers">
         <div class="article-card">
           <div class="content">
-            <a href="#"> <?= $row['kategori']; ?></a>
+            <a href="#"> <?= $row['category']; ?></a>
           </div>
         </div>
       </div>
     </a>
   <?php endforeach; ?>
 </div>
+
+<hr>

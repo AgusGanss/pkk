@@ -1,3 +1,33 @@
+<section>
+    <div class="p-3 text-light d-flex bd-highlight" style="background-color: black;">
+        <div class="p-2 flex-fill bd-highlight text-center">
+            <h5>Useful Link</h5>
+            <ul class="useful">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Shop</a></li>
+            </ul>
+        </div>
+        <div class="p-2 flex-fill bd-highlight text-center">
+            <h5>Private Policy</h5>
+        </div>
+        <div class="p-2 flex-fill bd-highlight text-center">
+            <h5>Media Sosial</h5>
+            <div class="medsos d-flex justify-content-center">
+                <div class="bg-secondary m-3 background ">
+                    <i class="bi bi-instagram "></i>
+                </div>
+                <div class="bg-secondary m-3 background">
+                    <i class="bi bi-facebook"></i>
+                </div>
+                <div class="bg-secondary m-3 background">
+                    <i class="bi bi-twitter"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- NAVBAR -->
 <script>

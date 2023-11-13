@@ -5,6 +5,7 @@ class shop extends Controller
     {
         $data['judul'] = 'Shop';
         $data['product'] = $this->model('shop_model')->getAllProductdata();
+        $data['category']=$this->model('category_model')->getCategory();
         $this->view('templates/header', $data);
         $this->view('templates/navbar');
         $this->view('shop/shop', $data);
