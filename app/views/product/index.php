@@ -174,9 +174,9 @@
                                     <?php foreach ($data['product'] as $p) : ?>
                                         <tbody>
                                             <td><?= $p['id']; ?></td>
-                                            <td><?= $p['product']; ?></td>
-                                            <td><?= $p['category']; ?></td>
-                                            <td><?= $p['price']; ?></td>
+                                            <td><?= $p['nama']; ?></td>
+                                            <td><?= $p['category_id']; ?></td>
+                                            <td><?= $p['harga']; ?></td>
                                             <td>
                                                 <a href="product/edit " class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
                                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
