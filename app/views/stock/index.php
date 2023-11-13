@@ -124,14 +124,26 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="<?= BASEURL ?>/category/create" method="POST">
+                                    <form action="<?= BASEURL ?>/stock/create" method="POST">
                                         <div class="mb-3">
-                                            <label for="tahun" class="form-label">Category</label>
-                                            <input type="text" class="form-control" id="tahun" name="category">
+                                            <label for="tahun" class="form-label">Product ID</label>
+                                            <input type="number" class="form-control" id="tahun" name="product_id">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="tahun" class="form-label">Product</label>
+                                            <input type="text" class="form-control" id="tahun" name="product">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="tahun" class="form-label">Stock</label>
+                                            <input type="number" class="form-control" id="tahun" name="stock">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="tahun" class="form-label">Tanggal</label>
+                                            <input type="date" class="form-control" id="tahun" name="tanggal">
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                            <button type="submit" class="btn btn-primary">Simpan Data</button>
                                         </div>
                                     </form>
                                 </div>
@@ -150,19 +162,26 @@
                         <div class="card-body ">
                             <table class="table">
                                 <tr>
-                                    <thead >
+                                    <thead>
                                         <th>Id</th>
-                                        <th>Category</th>
+                                        <th>Product</th>
+                                        <th>Jumlah Stock</th>
+                                        <th>Tanggal</th>
                                         <th colspan="2" class="fw-bolder">Action</th>
                                     </thead>
                                 </tr>
+                                <?php $no=0; ?>
                                 <tr>
-                                    <?php foreach ($data['category'] as $c) : ?>
-                                        <tbody >
-                                            <td><?= $c['id']; ?></td>
-                                            <td><?= $c['category']; ?></td>
-                                            <td><a href="product/edit " class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
-                                            <td><a href="<?= BASEURL ?>/category/delete/<?= $c['id'] ?>" class="btn btn-danger" onclick="return confirm('Yakin hapus data??');"><i class="bi bi-trash-fill"></i></a></td>
+                                    <?php foreach ($data['stock'] as $s) : ?>
+                                        <tbody>
+                                            <td><?= ++$no ?></td>
+                                            <td><?= $s['product']; ?></td>
+                                            <td><?= $s['stock']; ?></td>
+                                            <td><?= $s['tanggal']; ?></td>
+                                            <td>
+                                                <a href="<?= BASEURL ?>/stock/edit " class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
+                                            </td>
+                                            <td><a href="<?= BASEURL ?>/stock/delete/<?= $s['product_id'] ?>" class="btn btn-danger" onclick="return confirm('Yakin hapus data??');"><i class="bi bi-trash-fill"></i></a></td>
                                         </tbody>
                                     <?php endforeach; ?>
                                 </tr>
