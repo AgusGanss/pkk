@@ -162,7 +162,7 @@
                         <div class="card-body ">
                             <table class="table">
                                 <tr>
-                                    <thead >
+                                    <thead>
                                         <th>Product Id</th>
                                         <th>Product Name</th>
                                         <th>Category</th>
@@ -172,12 +172,48 @@
                                 </tr>
                                 <tr>
                                     <?php foreach ($data['product'] as $p) : ?>
-                                        <tbody >
+                                        <tbody>
                                             <td><?= $p['id']; ?></td>
                                             <td><?= $p['product']; ?></td>
                                             <td><?= $p['category']; ?></td>
                                             <td><?= $p['price']; ?></td>
-                                            <td><a href="product/edit " class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
+                                            <td>
+                                                <a href="product/edit " class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form action="<?= BASEURL ?>/product/edit" method="POST">
+                                                                    <div class="mb-3">
+                                                                        <label for="harga" class="form-label">Product Id</label>
+                                                                        <input type="number" class="form-control" id="harga" name="id" value="">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="judul" class="form-label">Product</label>
+                                                                        <input type="text" class="form-control" id="judul" name="product">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="tahun" class="form-label">Category</label>
+                                                                        <input type="text" class="form-control" id="tahun" name="category">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="harga" class="form-label">Price</label>
+                                                                        <input type="number" class="form-control" id="harga" name="price">
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td><a href="<?= BASEURL ?>/product/delete/<?= $p['id'] ?>" class="btn btn-danger" onclick="return confirm('Yakin hapus data??');"><i class="bi bi-trash-fill"></i></a></td>
                                         </tbody>
                                     <?php endforeach; ?>
