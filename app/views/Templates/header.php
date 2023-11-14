@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="<?= BASEURL; ?>/css/navbar.css">
   <link rel="stylesheet" href="<?= BASEURL; ?>/css/styles.css">
   <link rel="stylesheet" href="<?= BASEURL; ?>/css/login.css">
-  <body>
-  </head>
 
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">

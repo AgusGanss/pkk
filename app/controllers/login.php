@@ -13,31 +13,33 @@ class Login extends Controller{
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $email = $_POST['email'];
             $password = $_POST['password'];
-
+    
             $userModel = $this->model('registrasi_model');
-            $user = $userModel->getUsersById($email);
-
+            $user = $userModel->cekEmailPassword($email, $password);
+    
             if ($user) {
-                if (password_verify($password, $user['password'])) {
-                    $_SESSION['id'] = $user['id'];
-                    $_SESSION['name'] = $user['name'];
-                    $_SESSION['username'] = $user['username'];
-                    $_SESSION['email'] = $user['email'];
-                    $_SESSION['level'] = $user['level'];
-
-                    if ($user['level'] === 'admin') {
-                        header('Location: ' . BASEURL . '/product');
-                    } elseif($user['level'] === 'user') {
-                        header('Location: ' . BASEURL);
-                    }else {
-                        echo 'error';
-                    }
-
-                    exit;
-                } 
+                // Sesuaikan data sesi sesuai kebutuhan
+                $_SESSION['id'] = $user['id'];
+                $_SESSION['name'] = $user['name'];
+                $_SESSION['username'] = $user['username'];
+                $_SESSION['email'] = $user['email'];
+                $_SESSION['level'] = $user['level'];
+    
+                // Redirect sesuai level user
+                if ($user['level'] === 'admin') {
+                    header('Location: ' . BASEURL . '/product');
+                } else {
+                    header('Location: ' . BASEURL);
+                }
+                exit;
+            } else {
+                echo 'Invalid email or password';
+                var_dump($email);
+                var_dump($password);
             }
         }
     }
+    
 
     public function prosesLogout()
     {

@@ -30,6 +30,15 @@
             $this->db->bind('id', $id);
             return $this->db->single();
          }
+
+         public function cekEmailPassword($email, $password) {
+            $this->db->query('SELECT * FROM ' . $this->table . ' WHERE email=:email');
+            $this->db->bind(':email', $email);
+            $user = $this->db->single();
+            
+        }
+        
+        
          
          
 
