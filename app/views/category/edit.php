@@ -10,7 +10,15 @@
     <meta name="author" content="">
 
     <title>TOSEMSA</title>
-
+   <?php 
+	session_start();
+ 
+	// cek apakah yang mengakses halaman ini sudah login
+	if($_SESSION['level']==""){
+		header("location:login/index");
+	}
+ 
+	?>
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -34,7 +42,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-text "><h3>TOSEMSA</h3></div>
+                <div class="sidebar-brand-text "><h3>ADMIN</h3></div>
             </a>
 
             <!-- Divider -->
