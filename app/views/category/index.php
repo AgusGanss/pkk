@@ -156,12 +156,13 @@
                                         <th colspan="2" class="fw-bolder">Action</th>
                                     </thead>
                                 </tr>
+                                <?php $no=0; ?>
                                 <tr>
                                     <?php foreach ($data['category'] as $c) : ?>
                                         <tbody >
-                                            <td><?= $c['id']; ?></td>
+                                            <td><?= ++$no ?></td>
                                             <td><?= $c['category']; ?></td>
-                                            <td><a href="product/edit " class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
+                                            <td><a href="product/edit" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
                                             <td><a href="<?= BASEURL ?>/category/delete/<?= $c['id'] ?>" class="btn btn-danger" onclick="return confirm('Yakin hapus data??');"><i class="bi bi-trash-fill"></i></a></td>
                                         </tbody>
                                     <?php endforeach; ?>

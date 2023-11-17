@@ -170,11 +170,10 @@
                                         <th colspan="2" class="fw-bolder">Action</th>
                                     </thead>
                                 </tr>
-                                <?php $no=0; ?>
                                 <tr>
                                     <?php foreach ($data['stock'] as $s) : ?>
                                         <tbody>
-                                            <td><?= ++$no ?></td>
+                                            <td><?= $s['product_id'] ?></td>
                                             <td><?= $s['product']; ?></td>
                                             <td><?= $s['stock']; ?></td>
                                             <td><?= $s['tanggal']; ?></td>

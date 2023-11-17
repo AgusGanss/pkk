@@ -12,16 +12,14 @@ class product extends Controller{
         if($this->model('product_model')->createProduct($_POST) > 0){
             header('Location: ' . BASEURL . ' /product');
             exit;
+            
         }else{
             header('Location: ' . BASEURL . ' /product');
             exit;
         }
     }
     public function edit(){
-        if($this->model('product_model')->EditProduct($_POST) > 0){
-            header('Location: ' . BASEURL . ' /product');
-            exit;
-        }else{
+        if($this->model('product_model')->editProduct($_POST) > 0){
             header('Location: ' . BASEURL . ' /product');
             exit;
         }

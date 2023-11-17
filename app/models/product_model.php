@@ -27,15 +27,14 @@ class product_model extends Controller{
 
         return $this->db->rowCount();
     }
-    public function EditProduct($data){
-        $query= "UPDATE product 
-                SET product=:product, category=:category, price=:price WHERE id=:id";
+    public function editProduct($data){
+        $query = " UPDATE product SET product = :product, category = :category, price = :price WHERE id = :id ";
 
         $this->db->query($query);
-        $this->db->bind('id', $data['id']);
         $this->db->bind('product', $data['product']);
         $this->db->bind('category', $data['category']);
         $this->db->bind('price', $data['price']);
+        $this->db->bind('id', $data['id']);
 
         $this->db->execute();
 

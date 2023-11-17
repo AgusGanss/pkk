@@ -178,31 +178,30 @@
                                             <td><?= $p['category']; ?></td>
                                             <td><?= $p['price']; ?></td>
                                             <td>
-                                                <a href="product/edit " class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
-                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <a href="<?= BASEURL ?>/product/edit/<?=$p['id']?>"data-bs-toggle="modal" data-bs-target="#editModal<?= $p['id'] ?>" type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
+                                                <div class="modal fade" id="editModal<?= $p['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Product</h1>
                                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
                                                                 <form action="<?= BASEURL ?>/product/edit" method="POST">
-                                                                    <div class="mb-3">
-                                                                        <label for="harga" class="form-label">Product Id</label>
-                                                                        <input type="number" class="form-control" id="harga" name="id" value="">
+                                                                <div class="mb-3">
+                                                                        <input type="hidden" class="form-control" id="judul" name="id"value="<?=$p['id']?>">
                                                                     </div>
                                                                     <div class="mb-3">
                                                                         <label for="judul" class="form-label">Product</label>
-                                                                        <input type="text" class="form-control" id="judul" name="product">
+                                                                        <input type="text" class="form-control" id="judul" name="product"value="<?=$p['product']?>">
                                                                     </div>
                                                                     <div class="mb-3">
                                                                         <label for="tahun" class="form-label">Category</label>
-                                                                        <input type="text" class="form-control" id="tahun" name="category">
+                                                                        <input type="text" class="form-control" id="tahun" name="category"value="<?=$p['category']?>">
                                                                     </div>
                                                                     <div class="mb-3">
                                                                         <label for="harga" class="form-label">Price</label>
-                                                                        <input type="number" class="form-control" id="harga" name="price">
+                                                                        <input type="number" class="form-control" id="harga" name="price"value="<?=$p['price']?>">
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
